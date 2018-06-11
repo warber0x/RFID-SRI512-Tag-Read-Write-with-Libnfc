@@ -1,4 +1,4 @@
-# RFID SRI512 Tag Read/Write/UID with Libnfc
+#  Read/Write/Get UID from RFID SRI512 Tag with Libnfc
 
 This little project will show you how to read/write SRx RFID tags using libnfc.
 
