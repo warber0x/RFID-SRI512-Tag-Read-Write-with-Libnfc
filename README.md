@@ -5,7 +5,7 @@ This little project will show you how to read/write on SRx RFID tags using libnf
 I have an Adafruit PN532 shield that I use with Libnfc. I compiled the library to communicate through UART with arduino and the later as a SPI gateway to PN532. 
 
 I was struggling at first to find a way on how to read SRx Tags using libnfc as the library couldn't go deep into these type of RFID tags but just showing you the UID and the type of protocol it uses.
-ù5
+
 I decided then to understand how libnfc works and try to find a solution on how to add a custom function that can extend the ability of this great opensource library that was forgotten a little bit.
 
 Requirements:
@@ -21,6 +21,6 @@ The SR512 documentation and how to communicate with them: https://media.digikey.
 
 Let's begin:
 
-1- You have to add a custom functions to libnfc. I have a tutorial on how to do this in my repositories. There is two methods I will use the second as it's clean and easy. Here is the link to the second method: [Method 2](Custom_function_method_2.md)
+1- You have to add a custom functions to libnfc. I have a tutorial on how to do this in my repositories. There is two methods I will use the second as it's clean and easy. Here is the link to the second method: [Method 2]https://github.com/warber0x/Libnfc_custom_function/blob/master/Custom_function_method_2.md
 
 
