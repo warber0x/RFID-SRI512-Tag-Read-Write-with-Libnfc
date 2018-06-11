@@ -21,6 +21,6 @@ The SR512 documentation and how to communicate with them: https://media.digikey.
 
 Let's begin:
 
-1- You have to add a custom functions to libnfc. I have a tutorial on how to do this in my repositories. There is two methods I will use the second as it's clean and easy. Here is the link to the second method: [Method 2]https://github.com/warber0x/Libnfc_custom_function/blob/master/Custom_function_method_2.md
+1- You have to add a custom functions to libnfc. I have a tutorial on how to do this in my repositories. There is two methods I will use the second as it's clean and easy. Here is the link to the second method: [Method 2](https://github.com/warber0x/Libnfc_custom_function/blob/master/Custom_function_method_2.md)
 
 
