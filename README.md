@@ -17,6 +17,7 @@ Requirements:
 - Your time.
 
 If you don't know of to compile libnfc for your needs. Go to this link: http://nfc-tools.org/index.php/Libnfc:Arduino
+
 The SR512 documentation and how to communicate with them: https://media.digikey.com/pdf/Data%20Sheets/ST%20Microelectronics%20PDFS/SRI512.pdf
 
 Let's begin:
