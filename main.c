@@ -233,7 +233,7 @@ int main(int argc, char **argv)
 {
 	uint8_t address = 0;
 	uint32_t  data  = 0x00000000;
-	
+
 	if (argc != 3)
 	{
 		printf ("Usage: ./writeData [address in hex] [Data in hex]\n");
@@ -242,7 +242,7 @@ int main(int argc, char **argv)
 		return -1;
 	}
 	
-	address = strtol(argv[1], NULL, 16);
+	address   = strtol(argv[1], NULL, 16);
 	data      = strtol(argv[2], NULL, 16);
 	
 	if (address >= 0 && address <= 0x0F) 
@@ -255,7 +255,16 @@ int main(int argc, char **argv)
 	
 	printf ("\033[1;32m[*]\033[0m Preparing the reader ...\n");
 	printf ("\033[1;32m[*]\033[0m Write data: 0x%x at address: 0x%02x\n", data, address);
+	
+	/** 
+	 * To read data/UID from the tag you don't need address and block parameters
+	 * Just remove code from line 234 to 257. Keep just the function that you need in this main.
+	 *********************************************************************************************/
+	//read_data();
+	//read_uid_data();
+	
 	write_data(address, data);
+	
 	printf("\033[1;32m[*]\033[0m Done\n");
 	
 	return 0;
