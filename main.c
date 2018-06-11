@@ -1,10 +1,10 @@
 /**
  @Author: SAMIR Radouane
  @Date  : 31/03/2018
+ @Desc  :
  
- *
- * This code is to read data blocks from STx card *
- **************************************************/
+ * This code can read/write data blocks from STx card *
+ ******************************************************/
 
 
 #include <stdlib.h>
@@ -18,9 +18,9 @@
 #define RESET \033[0m
 
 #define INIT		0 
-#define UID			1
+#define UID		1
 #define READ		2
-#define WRITE	3
+#define WRITE		3
 
 #define MAX_TARGET_COUNT 16
 
@@ -73,8 +73,6 @@ int write_data(uint8_t address, int data)
 	nmtemp.nmt = NMT_ISO14443B;
 	nmtemp.nbr = NBR_106;
 	nfc_initiator_list_passive_targets(pnd, nmtemp, anttemp, MAX_TARGET_COUNT);
-	 //nfc_initiator_SRx(pnd, nmtemp, anttemp, MAX_TARGET_COUNT); 
-        
 	/**=========================================================================**/
 
 	/** Choose the type you wanna read **/
@@ -132,9 +130,7 @@ int read_data(void)
 	nfc_modulation nmtemp;
 	nmtemp.nmt = NMT_ISO14443B;
 	nmtemp.nbr = NBR_106;
-	nfc_initiator_list_passive_targets(pnd, nmtemp, anttemp, MAX_TARGET_COUNT);
-	 //nfc_initiator_SRx(pnd, nmtemp, anttemp, MAX_TARGET_COUNT); 
-        
+	nfc_initiator_list_passive_targets(pnd, nmtemp, anttemp, MAX_TARGET_COUNT);  
 	/**=========================================================================**/
 
 	/** Choose the type you wanna read **/
@@ -208,9 +204,7 @@ int read_uid(void)
 	nfc_modulation nmtemp;
 	nmtemp.nmt = NMT_ISO14443B;
 	nmtemp.nbr = NBR_106;
-	nfc_initiator_list_passive_targets(pnd, nmtemp, anttemp, MAX_TARGET_COUNT);
-	 //nfc_initiator_SRx(pnd, nmtemp, anttemp, MAX_TARGET_COUNT); 
-        
+	nfc_initiator_list_passive_targets(pnd, nmtemp, anttemp, MAX_TARGET_COUNT);     
 	/**=========================================================================**/
 
 	/** Choose the type you wanna read **/
@@ -220,8 +214,7 @@ int read_uid(void)
 	};
 	
 
-	uint8_t *buffer = nfc_read_uid_data(pnd, SRx) ;//(uint8_t*)malloc(sizeof(uint8_t)*20);
-	//memcpy(buffer, nfc_read_uid_data(pnd, SRx), 20);
+	uint8_t *buffer = nfc_read_uid_data(pnd, SRx);
 	int k = 0;
 	printf ("== === UID Data === ==\n");
 	for ( k = 0; k < 10; k++)
@@ -239,13 +232,13 @@ int read_uid(void)
 int main(int argc, char **argv)
 {
 	uint8_t address = 0;
-	uint32_t  data      = 0x00000000;
+	uint32_t  data  = 0x00000000;
 	
 	if (argc != 3)
 	{
 		printf ("Usage: ./writeData [address in hex] [Data in hex]\n");
 		printf("Ex: ./writeData 0x0F 0x02020101\n");
-		printf("By Red1 - 2018\n");
+		printf("By Red1 - Morocco\n");
 		return -1;
 	}
 	
