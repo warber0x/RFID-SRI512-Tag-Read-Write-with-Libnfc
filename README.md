@@ -32,7 +32,7 @@ N.B Thus far, I weren't able to make all the three functions work one after anot
 
 The code is straight forward, if you got your hands dirty on the second method what it will remain here is just to change some lines of code especially the SRI512 commands. This is not a complete tutorial, but it can help to move forward if you're stuck.
 
-A demo: https://www.youtube.com/watch?v=hL7XU9tzL68
+A demo: https://www.youtube.com/watch?v=HZDPleJ0gAw
 
 More to come especially in System_OTP_bits feature ...
 
